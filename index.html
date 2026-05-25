@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Essam | Flutter Architect & Mamluk Scribe Codex</title>
+  <meta name="description" content="Noble developer portfolio of Ahmed Essam, a high-performance Flutter engineer and Mobile Architect, designed with immersive Mamluk Epoch geometry.">
+  
+  <!-- Font Awesome 6 and Devicon CDN Integrations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <!-- Custom Immersive Theme Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="dark-theme"> <!-- Default: The Obsidian Sultanate -->
+
+  <!-- ==========================================================================
+       1. INTERACTIVE MOUSE Nib CURSOR & GOLDEN DUST CANVAS TRAIL
+       ========================================================================== -->
+  <canvas id="cursor-canvas"></canvas>
+  <div id="custom-cursor-nib">
+    <!-- Stylized Vintage Quill/Ink Pen Nib -->
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 0 L65 35 L58 45 L52 90 L48 90 L42 45 L35 35 Z M50 15 L50 65" fill="currentColor"/>
+      <circle cx="50" cy="40" r="3" fill="var(--bg-primary)"/>
+    </svg>
+  </div>
+
+  <!-- Heavy Page-Turn manuscript folding cover -->
+  <div id="page-turn-overlay"></div>
+
+  <!-- ==========================================================================
+       2. CINEMATIC MAMLUK GATE SPLASH ENTRY
+       ========================================================================== -->
+  <div id="splash-screen" role="presentation">
+    <!-- Sliding Archway Double Gates -->
+    <div class="splash-gate">
+      <div class="gate-wing left">
+        <div class="gate-decal"></div>
+      </div>
+      <div class="gate-wing right">
+        <div class="gate-decal"></div>
+      </div>
+    </div>
+    
+    <!-- Central Loading Ink Codex Contents -->
+    <div class="splash-content">
+      <div class="splash-logo-container">
+        <!-- Astrolabe geometry compass drawing vector -->
+        <svg class="splash-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <circle cx="50" cy="50" r="34" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4, 3" fill="none"/>
+          <path d="M50 8 L50 92 M8 50 L92 50" stroke="currentColor" stroke-width="1.2"/>
+          <polygon points="50,12 55,45 88,50 55,55 50,88 45,55 12,50 45,45" fill="currentColor"/>
+          <circle cx="50" cy="50" r="4" fill="var(--bg-primary)" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h1 id="splash-title" class="splash-title-text" data-trans="splash-text">This is Ahmed Essam... The man who will change the world.</h1>
+    </div>
+  </div>
+  
+  <!-- Fallback if Script fails -->
+  <noscript>
+    <style>
+      #splash-screen { display: none !important; }
+      .reveal-fade-up, .reveal-fade-in, .reveal-slide-left, .reveal-slide-right {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- ==========================================================================
+       3. NAVIGATION PORT HEADER
+       ========================================================================== -->
+  <header>
+    <div class="header-container">
+      <a href="#home" class="logo-stamp" aria-label="Ahmed Essam Home">
+        <!-- Minimalist Gold Seal SVG -->
+        <svg class="logo-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 5 L90 28 L90 72 L50 95 L10 72 L10 28 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+          <path d="M30 65 L45 32 L55 32 L70 65 M35 55 L65 55" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <span>A. Essam</span>
+      </a>
+
+      <!-- Navigation Codex Links -->
+      <nav id="nav-menu" class="nav-links" aria-label="Main Navigation">
+        <a href="#home" class="active" data-trans="nav-home">Grand Portal</a>
+        <a href="#about" data-trans="nav-about">The Chronicler</a>
+        <a href="#education" data-trans="nav-education">Pillars of Wisdom</a>
+        <a href="#projects" data-trans="nav-projects">Digital Conquests</a>
+        <a href="#skills" data-trans="nav-skills">The Master Codex</a>
+        <a href="#services" data-trans="nav-services">Royal Decrees</a>
+        <a href="#feedback" data-trans="nav-feedback">Scroll of Testimony</a>
+        <a href="#contact" data-trans="nav-contact">Sultan's Envoy</a>
+      </nav>
+
+      <!-- Theme & Lang configuration controls -->
+      <div class="nav-controls">
+        <button id="lang-toggle" class="control-btn" aria-label="Switch Language">ع</button>
+        <!-- Stylized Hanging Lantern Switcher -->
+        <div id="theme-toggle" class="lantern-toggle" aria-label="Switch Theme Mode">
+          <div class="lantern-chain"></div>
+          <div class="lantern-body">
+            <div class="lantern-flame"></div>
+          </div>
+        </div>
+        <button id="hamburger-btn" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       4. SECTIONS PORTAL snaps
+       ========================================================================== -->
+  <main id="voyager-container">
+
+    <!-- HOME PORTAL: Gate of Audience -->
+    <section id="home">
+      <div class="section-container home-grid">
+        <div class="home-info reveal-slide-left">
+          <span class="subtitle" data-trans="hero-subtitle">Grand Architect of Mobile Realms</span>
+          <h1 data-trans="hero-title">Ahmed Essam</h1>
+          <p class="tagline" data-trans="hero-tagline">Forging seamless, resilient mobile systems. Weaving Flutter's high-performance code with the structural discipline of ancient monumental engineering to establish digital legacies.</p>
+          <div class="home-actions">
+            <!-- Royal Red Ink Seal Stamp button -->
+            <a href="assets/Ahmed_Essam_CV.pdf" class="royal-seal-btn" download aria-label="Download CV">
+              <span data-trans="btn-cv">Download CV</span>
+            </a>
+            <a href="#projects" class="royal-seal-btn">
+              <span data-trans="btn-projects">Explore Conquests</span>
+            </a>
+          </div>
+        </div>
+        <div class="reveal-slide-right" style="display: flex; justify-content: center;">
+          <!-- Stylized Audience frame with spinning Astrolabe background -->
+          <div class="home-archway-frame">
+            <div class="home-archway-inner">
+              <div class="home-portrait-placeholder">
+                <img src="assets/ahmed.jpeg" alt="Ahmed Essam" class="home-portrait-img">
+                <svg class="astrolabe-spin" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.8" fill="none"/>
+                  <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4,2" fill="none"/>
+                  <path d="M50 5 L50 95 M5 50 L95 50" stroke="currentColor" stroke-width="0.8"/>
+                  <polygon points="50,8 54,46 92,50 54,54 50,92 46,54 8,50 46,46" fill="currentColor" opacity="0.3"/>
+                  <circle cx="50" cy="50" r="5" fill="none" stroke="currentColor" stroke-width="1"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PORTAL: The Chronicler Parchment -->
+    <section id="about">
+      <div class="section-container">
+        <div class="section-header reveal-fade-up">
+          <h2 data-trans="nav-about">The Chronicler</h2>
+        </div>
+        <!-- Distress Border Scroll Parchment -->
+        <div class="chronicle-parchment reveal-fade-in">
+          <div class="chronicle-content">
+            <h3 class="section-header" style="text-align: left; margin-bottom: 25px; border: none;" data-trans="about-title">The Scribe's Odyssey</h3>
+            <div class="chronicle-text">
+              <p data-trans="about-p1">A technical cartographer charting the expanse of cross-platform mobile engineering. As a Flutter architect, I align modular discipline with the curiosity of an explorer. Every application is forged with the precision of medieval masonry—built to withstand the tests of time, scale, and high-concurrency flows.</p>
+              <p data-trans="about-p2">We believe that software interfaces are the modern manuscripts of human exchange. Thus, we merge aesthetic proportion with absolute mathematical logic. Every line of Dart code is carved with intent, bridging fluid visual beauty with decoupled, bulletproof backend infrastructures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION PORTAL: Pillars of Wisdom Ablaq stripes -->
+    <section id="education">
+      <div class="section-container">
+        <div class="section-header reveal-fade-up">
+          <h2 data-trans="edu-title">Pillars of Wisdom</h2>
+        </div>
+        <!-- Ablaq Stone Pattern vertical timeline pillar -->
+        <div class="timeline-container">
+          <!-- Fac. of Computers -->
+          <div class="timeline-item left reveal-slide-left">
+            <div class="timeline-badge"></div>
+            <div class="timeline-panel">
+              <h3>2020 - 2024</h3>
+              <p class="school" data-trans="edu-degree-title">Bachelor of Computer Science</p>
+              <h4 style="margin-bottom: 10px;" data-trans="edu-degree-school">Faculty of Computers and Artificial Intelligence</h4>
+              <p data-trans="edu-degree-desc">Forged foundational knowledge in software engineering, advanced data structures, and algorithms. Specialized in solidifying the math and OOP architectures needed for scalable modern platforms.</p>
+            </div>
+          </div>
+          <!-- NTI Specialist -->
+          <div class="timeline-item right reveal-slide-right">
+            <div class="timeline-badge"></div>
+            <div class="timeline-panel">
+              <h3>2024</h3>
+              <p class="school" data-trans="edu-nti-title">Certified Flutter Specialist</p>
+              <h4 style="margin-bottom: 10px;" data-trans="edu-nti-school">National Telecommunication Institute (NTI)</h4>
+              <p data-trans="edu-nti-desc">Completed intensive specialization in enterprise-level Flutter engineering, advanced state management (BLoC/Cubit), custom painters, caching mechanisms, and localized caching.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS PORTAL: Digital Conquest Maps -->
+    <section id="projects">
+      <div class="section-container">
+        <div class="section-header reveal-fade-up">
+          <h2 data-trans="proj-title">Digital Conquests</h2>
+          <p data-trans="proj-subtitle">Artifacts of code designed for high-performance scale and durability.</p>
+        </div>
+        <div class="projects-grid">
+          <!-- Todo App Card -->
+          <div class="project-map-card reveal-fade-up delay-100">
+            <div class="project-map-header">
+              <div class="project-title">Todo App</div>
+              <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+            </div>
+            <p class="project-desc" data-trans="proj-todo-desc">A personal task codex utilizing local reactive states and custom-drawn scroll graphics to orchestrate workflows.</p>
+            <div class="project-actions">
+              <button class="project-btn" onclick="openProjectOverlay('todo')">
+                <span data-trans="proj-visit">Inspect Artifact</span>
+                <i class="fa-solid fa-scroll"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- News App Card -->
+          <div class="project-map-card reveal-fade-up delay-200">
+            <div class="project-map-header">
+              <div class="project-title">News App</div>
+              <div class="project-icon"><i class="fa-solid fa-newspaper"></i></div>
+            </div>
+            <p class="project-desc" data-trans="proj-news-desc">A real-time global intelligence aggregator equipped with localized offline caching and dynamic search layers.</p>
+            <div class="project-actions">
+              <button class="project-btn" onclick="openProjectOverlay('news')">
+                <span data-trans="proj-visit">Inspect Artifact</span>
+                <i class="fa-solid fa-scroll"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Ecommerce App Card -->
+          <div class="project-map-card reveal-fade-up delay-300">
+            <div class="project-map-header">
+              <div class="project-title">E-Commerce</div>
+              <div class="project-icon"><i class="fa-solid fa-store"></i></div>
+            </div>
+            <p class="project-desc" data-trans="proj-ecommerce-desc">A grand bazaar application. Integrates clean state architectures, location-aware map routing, and secure checkout gateways.</p>
+            <div class="project-actions">
+              <button class="project-btn" onclick="openProjectOverlay('ecommerce')">
+                <span data-trans="proj-visit">Inspect Artifact</span>
+                <i class="fa-solid fa-scroll"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bookly App Card -->
+          <div class="project-map-card reveal-fade-up delay-400">
+            <div class="project-map-header">
+              <div class="project-title">Bookly</div>
+              <div class="project-icon"><i class="fa-solid fa-book-open"></i></div>
+            </div>
+            <p class="project-desc" data-trans="proj-bookly-desc">An immersive reading sanctuary engineered with custom viewport physics and high-fidelity page-turn transitions.</p>
+            <div class="project-actions">
+              <button class="project-btn" onclick="openProjectOverlay('bookly')">
+                <span data-trans="proj-visit">Inspect Artifact</span>
+                <i class="fa-solid fa-scroll"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT DETAILS FULL-PAGE CODEX OVERLAY -->
+    <div id="project-details-overlay" class="project-overlay">
+      <div class="overlay-scroll">
+        <button class="overlay-close-btn" onclick="closeProjectOverlay()" aria-label="Close Artifact"><i class="fa-solid fa-xmark"></i></button>
+        <div id="overlay-dynamic-content">
+          <!-- JavaScript populates this map codex details on button clicks -->
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS PORTAL: The Codex Stone Grid -->
+    <section id="skills">
+      <div class="section-container">
+        <div class="section-header reveal-fade-up">
+          <h2 data-trans="skills-title">The Master Codex</h2>
+          <p data-trans="skills-subtitle">Languages and structural paradigms honed to build enduring software monuments.</p>
+        </div>
+        <div class="skills-codex-grid">
+          <!-- Dart -->
+          <div class="skill-stone-tile reveal-fade-up delay-100">
+            <!-- Precise inline custom Dart emblem vector -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 5 L90 35 L90 65 L50 95 L10 65 L10 35 Z M50 25 L75 45 L50 65 L25 45 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-dart">Dart Language</span>
+          </div>
+
+          <!-- Flutter -->
+          <div class="skill-stone-tile reveal-fade-up delay-200">
+            <!-- Precise inline custom Flutter geometric vector -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M65 15 L20 60 L45 85 L90 40 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+              <path d="M45 40 L65 60 L45 80" fill="none" stroke="currentColor" stroke-width="4"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-flutter">Flutter SDK</span>
+          </div>
+
+          <!-- SOLID / OOP Pillars -->
+          <div class="skill-stone-tile reveal-fade-up delay-300">
+            <!-- Custom Vector: OOP columns block temple structure -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="15" y="15" width="70" height="15" fill="none" stroke="currentColor" stroke-width="4"/>
+              <rect x="20" y="40" width="10" height="40" fill="none" stroke="currentColor" stroke-width="4"/>
+              <rect x="45" y="40" width="10" height="40" fill="none" stroke="currentColor" stroke-width="4"/>
+              <rect x="70" y="40" width="10" height="40" fill="none" stroke="currentColor" stroke-width="4"/>
+              <line x1="10" y1="85" x2="90" y2="85" stroke="currentColor" stroke-width="5"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-oop">SOLID Architecture</span>
+          </div>
+
+          <!-- Firebase -->
+          <div class="skill-stone-tile reveal-fade-up delay-400">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="50,10 15,75 50,90 85,75" fill="none" stroke="currentColor" stroke-width="4"/>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-firebase">Firebase Cloud</span>
+          </div>
+
+          <!-- Supabase -->
+          <div class="skill-stone-tile reveal-fade-up delay-100">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 20 L80 20 L25 80 L80 80 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-supabase">Supabase Database</span>
+          </div>
+
+          <!-- Git -->
+          <div class="skill-stone-tile reveal-fade-up delay-200">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="25" r="10" fill="none" stroke="currentColor" stroke-width="4"/>
+              <circle cx="25" cy="75" r="10" fill="none" stroke="currentColor" stroke-width="4"/>
+              <circle cx="75" cy="75" r="10" fill="none" stroke="currentColor" stroke-width="4"/>
+              <path d="M50 35 L25 65 M50 35 L75 65" stroke="currentColor" stroke-width="4"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-git">Git Version Flow</span>
+          </div>
+
+          <!-- REST APIs -->
+          <div class="skill-stone-tile reveal-fade-up delay-300">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="35" y="10" width="30" height="20" fill="none" stroke="currentColor" stroke-width="4"/>
+              <rect x="10" y="65" width="30" height="20" fill="none" stroke="currentColor" stroke-width="4"/>
+              <rect x="60" y="65" width="30" height="20" fill="none" stroke="currentColor" stroke-width="4"/>
+              <path d="M50 30 L50 50 M25 50 L75 50 M25 50 L25 65 M75 50 L75 65" stroke="currentColor" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-rest">RESTful Interfaces</span>
+          </div>
+
+          <!-- BLoC & Cubit State Management -->
+          <div class="skill-stone-tile reveal-fade-up delay-400">
+            <!-- Custom unidirectional modular state flow architecture vector -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="35" width="20" height="30" fill="none" stroke="currentColor" stroke-width="4"/>
+              <rect x="70" y="35" width="20" height="30" fill="none" stroke="currentColor" stroke-width="4"/>
+              <circle cx="50" cy="50" r="12" fill="none" stroke="currentColor" stroke-width="4"/>
+              <!-- Unidirectional Flow arrows -->
+              <path d="M30 40 L50 25 L70 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M70 60 L50 75 L30 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-state">BLoC & Cubit States</span>
+          </div>
+
+          <!-- Responsive UI -->
+          <div class="skill-stone-tile reveal-fade-up delay-100">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="20" width="80" height="60" rx="4" fill="none" stroke="currentColor" stroke-width="4"/>
+              <line x1="30" y1="80" x2="70" y2="80" stroke="currentColor" stroke-width="4"/>
+              <rect x="65" y="45" width="20" height="30" rx="2" fill="var(--bg-secondary)" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-ui">Responsive Design</span>
+          </div>
+
+          <!-- Payments -->
+          <div class="skill-stone-tile reveal-fade-up delay-200">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="25" width="80" height="50" rx="6" fill="none" stroke="currentColor" stroke-width="4"/>
+              <line x1="10" y1="42" x2="90" y2="42" stroke="currentColor" stroke-width="5"/>
+              <rect x="20" y="55" width="18" height="10" fill="none" stroke="currentColor" stroke-width="3"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-payments">Stripe & Checkout</span>
+          </div>
+
+          <!-- Geolocational Maps -->
+          <div class="skill-stone-tile reveal-fade-up delay-300">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 10 A25 25 0 0 0 25 35 C25 55 50 85 50 85 C50 85 75 55 75 35 A25 25 0 0 0 50 10 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+              <circle cx="50" cy="35" r="8" fill="none" stroke="currentColor" stroke-width="4"/>
+            </svg>
+            <span class="skill-name" data-trans="skill-maps">Maps & Location API</span>
+          </div>
+
+          <!-- Android OS -->
+          <div class="skill-stone-tile reveal-fade-up delay-400">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 45 A25 25 0 0 1 75 45 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+              <line x1="30" y1="20" x2="40" y2="35" stroke="currentColor" stroke-width="4"/>
+              <line x1="70" y1="20" x2="60" y2="35" stroke="currentColor" stroke-width="4"/>
+              <circle cx="40" cy="40" r="3" fill="currentColor"/>
+              <circle cx="60" cy="40" r="3" fill="currentColor"/>
+            </svg>
+            <span class="skill-name">OS Integrations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES PORTAL: Royal Decrees in Sultan Court -->
+    <section id="services">
+      <div class="section-container">
+        <div class="section-header reveal-fade-up">
+          <h2 data-trans="srv-title">Royal Decrees of Expertise</h2>
+        </div>
+        <div class="services-container">
+          <!-- Decree 1 -->
+          <div class="service-decree-card reveal-fade-up delay-100">
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3 data-trans="srv-cross-title">End-to-End Mobile Craftsmanship</h3>
+            <p data-trans="srv-cross-desc">Shaping pristine, high-performance applications for iOS and Android from a single, modular Dart source code.</p>
+          </div>
+
+          <!-- Decree 2 -->
+          <div class="service-decree-card reveal-fade-up delay-200">
+            <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 data-trans="srv-state-title">State Architecture Design</h3>
+            <p data-trans="srv-state-desc">Structuring decoupled, highly testable application states utilizing BLoC and Cubit to facilitate infinite horizontal feature growth.</p>
+          </div>
+
+          <!-- Decree 3 -->
+          <div class="service-decree-card reveal-fade-up delay-300">
+            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+            <h3 data-trans="srv-api-title">Backend & Database Integrations</h3>
+            <p data-trans="srv-api-desc">Connecting systems securely to REST APIs, Supabase datastores, and Firebase Authentication with robust offline caching.</p>
+          </div>
+
+          <!-- Decree 4 -->
+          <div class="service-decree-card reveal-fade-up delay-100">
+            <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3 data-trans="srv-anim-title">High-Fidelity Animations & UI Paint</h3>
+            <p data-trans="srv-anim-desc">Breathing life into viewports using low-level canvas painters and custom physics-based transitions that engage users.</p>
+          </div>
+
+          <!-- Decree 5 -->
+          <div class="service-decree-card reveal-fade-up delay-200">
+            <div class="service-icon"><i class="fa-solid fa-credit-card"></i></div>
+            <h3 data-trans="srv-pay-title">Financial Gateways & Geofenced Services</h3>
+            <p data-trans="srv-pay-desc">Weaving secure Stripe, PayPal, and Google Maps API workflows. Supporting complex routing algorithms and secure payment validation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK PORTAL: Scroll of Testimony -->
+    <section id="feedback">
+      <div class="section-container">
+        <div class="section-header reveal-fade-up">
+          <h2 data-trans="feed-title">Scroll of Testimony</h2>
+          <p data-trans="feed-subtitle">Scribe records from leaders across the technical landscape.</p>
+        </div>
+        <!-- Long Open Parchment Scroll with rotating Spindle Rollers -->
+        <div class="scroll-roll-wrapper reveal-fade-in">
+          <div class="scroll-wooden-spindle left-spindle"></div>
+          
+          <div class="scroll-view-viewport">
+            <div id="testimonial-track" class="scroll-slide-track">
+              <!-- Scribe 1 -->
+              <div class="testimonial-parchment">
+                <p class="testimonial-quote" data-trans="feed-1-text">"Ahmed delivered a pristine, scalable state-management architecture for our financial portal ahead of schedule. His attention to code quality and testing parameters is exemplary."</p>
+                <div class="testimonial-scribe">
+                  <div class="scribe-name" data-trans="feed-1-name">Alexander Sterling</div>
+                  <div class="scribe-role" data-trans="feed-1-role">Principal Lead at FinTech Solutions</div>
+                </div>
+              </div>
+              <!-- Scribe 2 -->
+              <div class="testimonial-parchment">
+                <p class="testimonial-quote" data-trans="feed-2-text">"A world-class mobile developer. He transformed our complex logistics platform into an exceptionally fluid, responsive, and location-aware Flutter application."</p>
+                <div class="testimonial-scribe">
+                  <div class="scribe-name" data-trans="feed-2-name">Fatma Al-Hassani</div>
+                  <div class="scribe-role" data-trans="feed-2-role">Founder & CEO of Rawy App</div>
+                </div>
+              </div>
+              <!-- Scribe 3 -->
+              <div class="testimonial-parchment">
+                <p class="testimonial-quote" data-trans="feed-3-text">"Outstanding communication and clean-code delivery. Ahmed understands business needs and turns them into maintainable technical systems that scale."</p>
+                <div class="testimonial-scribe">
+                  <div class="scribe-name" data-trans="feed-3-name">David Vance</div>
+                  <div class="scribe-role" data-trans="feed-3-role">VP of Engineering at GeoTrack Ltd.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dots controllers inside parchment space -->
+            <div class="slider-controls">
+              <button class="slider-dot-btn active" aria-label="Slide 1"></button>
+              <button class="slider-dot-btn" aria-label="Slide 2"></button>
+              <button class="slider-dot-btn" aria-label="Slide 3"></button>
+            </div>
+          </div>
+
+          <div class="scroll-wooden-spindle right-spindle"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT PORTAL: Final envoy Audience -->
+    <section id="contact">
+      <div class="section-container">
+        <div class="section-header reveal-fade-up">
+          <h2 data-trans="contact-title">The Sultan's Envoy</h2>
+          <p data-trans="contact-subtitle">Dispatch a request to collaborate on your next digital monument.</p>
+        </div>
+        <div class="contact-hall-box reveal-fade-in">
+          <p data-trans="contact-p">Let us trace the future in golden ink and clean code. Scribe Ahmed Essam stands ready to embark on your next conquest.</p>
+          <div class="royal-stamps-row">
+            <!-- Email -->
+            <a href="mailto:ahmed.essam.developer.flutter@gmail.com" class="royal-channel-stamp" aria-label="Mail Dispatch">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-trans="contact-email">Send Dispatch</span>
+            </a>
+            <!-- Phone -->
+            <a href="tel:+201061239813" class="royal-channel-stamp" aria-label="Call Direct">
+              <i class="fa-solid fa-phone"></i>
+              <span data-trans="contact-phone">Oral Audition</span>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/ahmed-essam-developer" target="_blank" rel="noopener noreferrer" class="royal-channel-stamp" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span data-trans="contact-linkedin">LinkedIn</span>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/AhmedEssamDev" target="_blank" rel="noopener noreferrer" class="royal-channel-stamp" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+              <span data-trans="contact-github">GitHub Forge</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       5. SOVEREIGN FOOTER
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ahmed Essam. Forged with modular precision. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Dynamic Translation & Engine scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

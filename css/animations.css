@@ -1,0 +1,176 @@
+/* ==========================================================================
+   ANIMATIONS.CSS: MAMLUK GATE OPENINGS & SCROLL REVEALS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CINEMATIC GATE & SPLASH SCREEN ANIMATIONS
+   -------------------------------------------------------------------------- */
+
+/* Double Gate archway swing open */
+#splash-screen.gate-open .gate-wing.left {
+  transform: translateX(-100%) rotateY(-70deg);
+  opacity: 0;
+}
+
+#splash-screen.gate-open .gate-wing.right {
+  transform: translateX(100%) rotateY(70deg);
+  opacity: 0;
+}
+
+/* 5s Loading draw logo keyframes */
+.splash-logo-svg path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawLogo 3.5s ease-in-out forwards;
+}
+
+@keyframes drawLogo {
+  0% {
+    stroke-dashoffset: 600;
+    filter: drop-shadow(0 0 2px rgba(197, 160, 89, 0.1));
+  }
+  70% {
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.6));
+  }
+  100% {
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0 0 8px rgba(197, 160, 89, 0.4));
+    fill: rgba(197, 160, 89, 0.1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. HEAVY MANUSCRIPT PAGE-TURN SWEEP
+   -------------------------------------------------------------------------- */
+.page-turn-active {
+  animation: pageTurnSweep 0.9s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+@keyframes pageTurnSweep {
+  0% {
+    transform: skewX(-12deg) translateX(110%);
+  }
+  45% {
+    transform: skewX(-12deg) translateX(-10%);
+  }
+  55% {
+    transform: skewX(-12deg) translateX(-10%);
+  }
+  100% {
+    transform: skewX(-12deg) translateX(-130%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. INK-BLEED BLUR & REVEALS
+   -------------------------------------------------------------------------- */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(5px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.reveal-fade-in {
+  opacity: 0;
+  filter: blur(4px);
+  transition: opacity 1s ease, filter 1s ease;
+}
+
+.reveal-fade-in.visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  filter: blur(2px);
+  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+.reveal-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  filter: blur(2px);
+  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+.reveal-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+/* Staggered Delay Helpers */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+
+/* --------------------------------------------------------------------------
+   4. AMBIENT GLOWS & LANTERN BREATHING
+   -------------------------------------------------------------------------- */
+.lantern-flame {
+  animation: lanternBreath 3s infinite alternate ease-in-out;
+}
+
+@keyframes lanternBreath {
+  0% {
+    transform: rotate(-45deg) scale(0.9);
+    filter: drop-shadow(0 0 4px #FF8C00) brightness(0.9);
+  }
+  50% {
+    transform: rotate(-43deg) scale(1.1);
+    filter: drop-shadow(0 0 12px #FFD700) brightness(1.1);
+  }
+  100% {
+    transform: rotate(-47deg) scale(0.95);
+    filter: drop-shadow(0 0 6px #FFA500) brightness(0.95);
+  }
+}
+
+/* Timeline Badge shield entrance rotation */
+.timeline-item.visible .timeline-badge {
+  animation: badgeEntrance 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes badgeEntrance {
+  0% {
+    transform: scale(0) rotate(-180deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Compass Astrolabe rotating background decals */
+.astrolabe-spin {
+  animation: slowAstrolabeSpin 40s linear infinite;
+}
+
+@keyframes slowAstrolabeSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
