@@ -7,12 +7,13 @@
 const translations = {
   en: {
     // Navigation & Header
-    "nav-home": "The Grand Portal",
-    "nav-about": "The Chronicler",
-    "nav-education": "Pillars of Wisdom",
-    "nav-projects": "Digital Conquests",
-    "nav-skills": "The Master Codex",
-    "nav-services": "Royal Decrees",
+    "logo-text": "A. Essam",
+    "nav-home": "The Royal Court",
+    "nav-about": "My Chronicles",
+    "nav-education": "My Academies",
+    "nav-projects": "My Works",
+    "nav-skills": "Tools & Instruments",
+    "nav-services": "My Capabilities",
     "nav-feedback": "Scroll of Testimony",
     "nav-contact": "Sultan's Envoy",
 
@@ -24,7 +25,7 @@ const translations = {
     "hero-subtitle": "Grand Architect of Mobile Realms",
     "hero-tagline": "Forging seamless, resilient mobile systems. Weaving Flutter's high-performance code with the structural discipline of ancient monumental engineering to establish digital legacies.",
     "btn-cv": "Download CV",
-    "btn-projects": "Explore Conquests",
+    "btn-projects": "Explore My Works",
 
     // About Section
     "about-title": "The Scribe's Odyssey",
@@ -32,7 +33,7 @@ const translations = {
     "about-p2": "We believe that software interfaces are the modern manuscripts of human exchange. Thus, we merge aesthetic proportion with absolute mathematical logic. Every line of Dart code is carved with intent, bridging fluid visual beauty with decoupled, bulletproof backend infrastructures.",
 
     // Education Section
-    "edu-title": "Pillars of Wisdom",
+    "edu-title": "My Academies",
     "edu-degree-title": "Bachelor of Computer Science",
     "edu-degree-school": "Faculty of Computers and Artificial Intelligence",
     "edu-degree-desc": "Forged foundational knowledge in software engineering, advanced data structures, and algorithms. Specialized in solidifying the math and OOP architectures needed for scalable modern platforms.",
@@ -41,7 +42,7 @@ const translations = {
     "edu-nti-desc": "Completed intensive specialization in enterprise-level Flutter engineering, advanced state management (BLoC/Cubit), custom painters, caching mechanisms, and localized caching.",
 
     // Projects Section
-    "proj-title": "Digital Conquests",
+    "proj-title": "My Works",
     "proj-subtitle": "Artifacts of code designed for high-performance scale and durability.",
     "proj-todo-desc": "A personal task codex utilizing local reactive states and custom-drawn scroll graphics to orchestrate workflows.",
     "proj-news-desc": "A real-time global intelligence aggregator equipped with localized offline caching and dynamic search layers.",
@@ -50,7 +51,7 @@ const translations = {
     "proj-visit": "Inspect Artifact",
 
     // Skills Section
-    "skills-title": "The Master Codex",
+    "skills-title": "Tools & Instruments",
     "skills-subtitle": "Languages and structural paradigms honed to build enduring software monuments.",
     "skill-dart": "Dart Language",
     "skill-flutter": "Flutter SDK",
@@ -66,7 +67,7 @@ const translations = {
     "skill-os": "Android & iOS OS Integrations",
 
     // Services Section
-    "srv-title": "Royal Decrees of Expertise",
+    "srv-title": "My Capabilities",
     "srv-cross-title": "End-to-End Mobile Craftsmanship",
     "srv-cross-desc": "Shaping pristine, high-performance applications for iOS and Android from a single, modular Dart source code.",
     "srv-state-title": "State Architecture Design",
@@ -102,12 +103,13 @@ const translations = {
   },
   ar: {
     // Navigation & Header
-    "nav-home": "بوابة الدخول",
-    "nav-about": "سجل المؤرخ",
-    "nav-education": "أعمدة الحكمة",
-    "nav-projects": "الفتوحات الرقمية",
-    "nav-skills": "المدونة الكبرى",
-    "nav-services": "المراسيم السلطانية",
+    "logo-text": "أ. عصام",
+    "nav-home": "البهو السلطاني",
+    "nav-about": "ترجمتي",
+    "nav-education": "مدارسي",
+    "nav-projects": "أعمالي",
+    "nav-skills": "أدواتي وآلاتي",
+    "nav-services": "ما أقدر على فعله",
     "nav-feedback": "سجل الشهادات",
     "nav-contact": "مبعوث السلطان",
 
@@ -119,15 +121,15 @@ const translations = {
     "hero-subtitle": "مهندس المعمار العظيم للتطبيقات",
     "hero-tagline": "أصنع تطبيقات هواتف مرنة وعالية الأداء. أمزج بين متانة البناء المعماري القديم وهندسة فلاتر البرمجية لبناء صروح رقمية خالدة.",
     "btn-cv": "تحميل السيرة الذاتية",
-    "btn-projects": "استكشف الفتوحات",
+    "btn-projects": "استكشف أعمالي",
 
     // About Section
-    "about-title": "رحلة كاتب البرمجيات",
+    "about-title": "رحلة مطور شغوف",
     "about-p1": "أَنَا مُسْتَكْشِفٌ وَرَسَّامُ خَرَائِطَ رَقْمِيَّةٍ، أَشُقُّ دَرْبِي فِي عَوَالِمِ تَطْبِيقَاتِ الْهَوَاتِفِ الذَّكِيَّةِ. كَمِعْمَارِيٍّ خَبِيرٍ فِي فْلَاتَر (Flutter)، أَرْبِطُ بَيْنَ الِانْضِبَاطِ الْهَنْدَسِيِّ وَشَغَفِ التَّرْحَالِ وَالِاكْتِشَافِ. تُبْنَى كُلُّ وَاجِهَةٍ وَكُلُّ مِعْمَارِيَّةٍ بَرْمَجِيَّةٍ بِأَعْلَى دَرَجَاتِ الدِّقَّةِ وَالصَّلَابَةِ الْهَنْدَسِيَّةِ، كَبِنَاءِ الْمَسَاجِدِ وَالْقِلَاعِ الْعَتِيقَةِ لِتَصْمُدَ طَوِيلًا.",
     "about-p2": "إِيمَانًا مِنَّا بِأَنَّ وَاجِهَاتِ الْمُسْتَخْدِمِ هِيَ الْمَخْطُوطَاتُ الْعَصْرِيَّةُ الَّتِي تَجْمَعُ الْبَشَرَ، نَصْنَعُ كُلَّ نِظَامٍ بِتَوَازُنٍ مِثَالِيٍّ بَيْنَ رَوْعَةِ الْفَنِّ وَدِقَّةِ الْبَرْمَجَةِ الرِّيَاضِيَّةِ. يَخُطُّ كُودُ دَارْت (Dart) بِعِنَايَةٍ فَائِقَةٍ لِرَبْطِ الْوَاجِهَاتِ فَائِقَةِ الِانْسِيَابِيَّةِ بِالْبِنْيَةِ التَّحْتِيَّةِ الْخَلْفِيَّةِ الْمَتِينَةِ وَالْمُسْتَقِلَّةِ تَمَامًا.",
 
     // Education Section
-    "edu-title": "أعمدة الحكمة",
+    "edu-title": "مدارسي",
     "edu-degree-title": "بكالوريوس علوم الحاسب",
     "edu-degree-school": "كلية الحاسبات والذكاء الاصطناعي",
     "edu-degree-desc": "صقل المعرفة التأسيسية في هندسة البرمجيات، وهياكل البيانات المتقدمة، وتطوير الخوارزميات. التركيز على ترسيخ مفاهيم البرمجة كائنية التوجه (OOP) لبناء منصات حديثة.",
@@ -136,7 +138,7 @@ const translations = {
     "edu-nti-desc": "تخصص مكثف في هندسة تطبيقات فلاتر المخصصة للشركات، وإدارة الحالة المتقدمة (BLoC/Cubit)، والرسم المخصص، والتخزين المؤقت، وتحسين الأداء.",
 
     // Projects Section
-    "proj-title": "الفتوحات الرقمية",
+    "proj-title": "أعمالي",
     "proj-subtitle": "بناء حلول برمجية مرنة ومصممة للتوسع والنمو المستمر.",
     "proj-todo-desc": "تطبيق إنتاجية متقدم يعتمد على إدارة تفاعلية للحالة وتخزين محلي مرن لتنظيم وتتبع المهام اليومية بكفاءة.",
     "proj-news-desc": "محرك إخباري عالمي فوري يعتمد على التخزين المؤقت ذي الأولوية المحلية، ومعالجة البيانات من REST APIs، وتصميم شبكي متجاوب.",
@@ -145,7 +147,7 @@ const translations = {
     "proj-visit": "معاينة المستند",
 
     // Skills Section
-    "skills-title": "المدونة الكبرى",
+    "skills-title": "أدواتي وآلاتي",
     "skills-subtitle": "الترسانة التقنية والأنماط المعمارية التي أصقلناها لبناء صروح برمجية راسخة.",
     "skill-dart": "لغة دارت (Dart)",
     "skill-flutter": "إطار عمل فلاتر (Flutter)",
@@ -161,7 +163,7 @@ const translations = {
     "skill-os": "تكامل أنظمة التشغيل (Android/iOS)",
 
     // Services Section
-    "srv-title": "المراسيم السلطانية للخبرات",
+    "srv-title": "ما أقدر على فعله",
     "srv-cross-title": "تطوير تطبيقات متعددة الأنظمة بأداء أصيل",
     "srv-cross-desc": "صناعة تطبيقات الهواتف الذكية فائقة السرعة والاستجابة لنظامي iOS وأندرويد باستخدام كود دارت برمجي موحد ونظيف.",
     "srv-state-title": "هندسة وإدارة حالة التطبيقات للشركات",

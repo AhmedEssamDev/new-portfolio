@@ -686,6 +686,19 @@ section {
   z-index: 2;
 }
 
+.chronicle-title {
+  font-family: var(--font-header);
+  font-size: 2.2rem;
+  color: var(--accent-gold);
+  text-align: left;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+body[dir="rtl"] .chronicle-title {
+  text-align: right;
+}
+
 .chronicle-text p {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
