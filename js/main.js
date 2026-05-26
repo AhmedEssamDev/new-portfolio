@@ -379,17 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageTurnObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const nextSecId = entry.target.getAttribute("id");
-        if (lastSection !== "" && lastSection !== nextSecId) {
-          // Trigger the skew paper turn curtain
-          if (pageTurnOverlay) {
-            pageTurnOverlay.classList.remove("page-turn-active");
-            // Force redraw layout
-            void pageTurnOverlay.offsetWidth;
-            pageTurnOverlay.classList.add("page-turn-active");
-          }
-        }
-        lastSection = nextSecId;
+        lastSection = entry.target.getAttribute("id");
       }
     });
   }, {
@@ -397,6 +387,44 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   pageSections.forEach(sec => pageTurnObserver.observe(sec));
+
+  // Intercept anchor clicks to trigger page-turn curtain transition
+  const hashLinks = document.querySelectorAll('a[href^="#"]');
+  hashLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const targetId = link.getAttribute("href");
+      if (targetId === "#") return;
+      const targetSection = document.querySelector(targetId);
+      if (!targetSection) return;
+
+      e.preventDefault();
+
+      // Trigger the skew paper turn curtain
+      if (pageTurnOverlay) {
+        pageTurnOverlay.classList.remove("page-turn-active");
+        // Force redraw layout
+        void pageTurnOverlay.offsetWidth;
+        pageTurnOverlay.classList.add("page-turn-active");
+      }
+
+      // Scroll after 450ms (when curtain covers the screen fully)
+      setTimeout(() => {
+        targetSection.scrollIntoView({ behavior: "auto" });
+        if (history.pushState) {
+          history.pushState(null, null, targetId);
+        } else {
+          location.hash = targetId;
+        }
+      }, 450);
+
+      // Clean up class after animation finishes (900ms)
+      setTimeout(() => {
+        if (pageTurnOverlay) {
+          pageTurnOverlay.classList.remove("page-turn-active");
+        }
+      }, 900);
+    });
+  });
 
   // --------------------------------------------------------------------------
   // 7. ACTIVE NAVIGATION LINKS HIGHLIGHTS
@@ -468,7 +496,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const isRtl = body.getAttribute("dir") === "rtl";
-    testimonialTrack.style.transform = `translateX(${slideIndex * (isRtl ? 1 : -1) * 100}%)`;
+    const percentage = 100 / cards.length;
+    testimonialTrack.style.transform = `translateX(${slideIndex * (isRtl ? percentage : -percentage)}%)`;
 
     sliderDots.forEach((dot, idx) => {
       dot.classList.toggle("active", idx === slideIndex);
@@ -495,6 +524,21 @@ document.addEventListener("DOMContentLoaded", () => {
       startAutoRotation(); // Reset autoplay timer
     });
   });
+
+  // Previous and Next testimonial arrows click handlers
+  const prevTestimonialBtn = document.getElementById("prev-testimonial-btn");
+  const nextTestimonialBtn = document.getElementById("next-testimonial-btn");
+
+  if (prevTestimonialBtn && nextTestimonialBtn) {
+    prevTestimonialBtn.addEventListener("click", () => {
+      goToSlide(slideIndex - 1);
+      startAutoRotation();
+    });
+    nextTestimonialBtn.addEventListener("click", () => {
+      goToSlide(slideIndex + 1);
+      startAutoRotation();
+    });
+  }
 
   startAutoRotation();
 });
