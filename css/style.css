@@ -384,6 +384,7 @@ section {
    5. SPLASH SCREEN & HOME PORTAL
    -------------------------------------------------------------------------- */
 #splash-screen {
+  direction: ltr !important;
   position: fixed;
   top: 0;
   left: 0;
