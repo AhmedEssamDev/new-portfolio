@@ -178,12 +178,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. THEME CONFIGURATION
   // --------------------------------------------------------------------------
   function applyTheme(theme) {
+    const flameIcon = themeToggleBtn ? themeToggleBtn.querySelector(".lantern-flame i") : null;
     if (theme === "dark") {
       body.classList.remove("light-theme");
       body.classList.add("dark-theme");
+      if (flameIcon) {
+        flameIcon.className = "fa-solid fa-moon";
+      }
     } else {
       body.classList.remove("dark-theme");
       body.classList.add("light-theme");
+      if (flameIcon) {
+        flameIcon.className = "fa-solid fa-sun";
+      }
     }
     safeSetItem("portfolio_theme", theme);
     currentTheme = theme;

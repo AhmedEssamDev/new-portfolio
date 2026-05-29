@@ -297,13 +297,24 @@ body.light-theme header {
 }
 
 .lantern-toggle .lantern-flame {
-  width: 8px;
-  height: 8px;
-  background: #FFA500;
-  border-radius: 50% 50% 20% 20%;
-  transform: rotate(-45deg);
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  width: 100%;
+  height: 100%;
   transition: var(--transition-smooth);
+}
+
+/* Light mode styling for the lantern */
+body.light-theme .lantern-body {
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
+  background: rgba(197, 160, 89, 0.1);
+}
+
+body.light-theme .lantern-flame {
+  color: #FFA500;
+  filter: drop-shadow(0 0 3px #FFA500);
 }
 
 /* When dark mode (flame burns bright gold) */
@@ -313,8 +324,8 @@ body.dark-theme .lantern-body {
 }
 
 body.dark-theme .lantern-flame {
-  opacity: 1;
-  box-shadow: 0 0 10px #FFD700;
+  color: #FFD700;
+  filter: drop-shadow(0 0 6px #FFD700);
 }
 
 /* Hamburger mobile button */
@@ -503,10 +514,20 @@ section {
 /* HOME SECTION - The Audience Hall */
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 50px;
   min-height: 70vh;
+}
+
+.home-portrait-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+body[dir="rtl"] .home-portrait-wrapper {
+  justify-content: flex-start;
 }
 
 .home-archway-frame {
@@ -544,8 +565,8 @@ section {
 
 .home-portrait-img {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent-gold);
@@ -1486,5 +1507,17 @@ body[dir="rtl"] .timeline-item.right .timeline-badge {
   }
   .scroll-arrow-btn.next-btn {
     right: -5px;
+  }
+}
+
+/* Symmetrical desktop shift for the hero image */
+@media (min-width: 993px) {
+  .home-archway-frame {
+    transform: translateX(35px);
+    transition: transform var(--transition-smooth);
+  }
+  
+  body[dir="rtl"] .home-archway-frame {
+    transform: translateX(-35px);
   }
 }
