@@ -394,14 +394,22 @@ section {
 /* --------------------------------------------------------------------------
    5. SPLASH SCREEN & HOME PORTAL
    -------------------------------------------------------------------------- */
+/* Splash always uses Obsidian cinematic palette (independent of light/dark theme) */
 #splash-screen {
+  --splash-bg: #050507;
+  --splash-gate: #09090b;
+  --splash-gold: #C5A059;
+  --splash-gold-soft: rgba(197, 160, 89, 0.85);
+  --splash-gold-glow: rgba(197, 160, 89, 0.4);
+  --splash-gold-border: rgba(197, 160, 89, 0.05);
   direction: ltr !important;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #050507;
+  background-color: var(--splash-bg);
+  color: var(--splash-gold);
   z-index: 10000;
   display: flex;
   align-items: center;
@@ -422,24 +430,22 @@ section {
 .gate-wing {
   width: 50%;
   height: 100%;
-  background: #09090b;
+  background: var(--splash-gate);
   position: relative;
   transition: transform 1.2s cubic-bezier(0.76, 0, 0.24, 1);
   display: flex;
   align-items: center;
-  border: 1px solid rgba(197, 160, 89, 0.05);
+  border: 1px solid var(--splash-gold-border);
 }
 
 .gate-wing.left {
   justify-content: flex-end;
   transform-origin: left;
-  border-right: 2px solid var(--accent-gold);
 }
 
 .gate-wing.right {
   justify-content: flex-start;
   transform-origin: right;
-  border-left: 2px solid var(--accent-gold);
 }
 
 .gate-decal {
@@ -476,21 +482,43 @@ section {
   width: 120px;
   height: 120px;
   fill: none;
-  stroke: var(--accent-gold);
+  color: var(--splash-gold);
+  stroke: var(--splash-gold);
   stroke-width: 1.5;
-  filter: drop-shadow(0 0 15px var(--border-glow));
+  filter: drop-shadow(0 0 15px var(--splash-gold-glow));
+}
+
+#splash-screen .splash-logo-core {
+  fill: var(--splash-bg);
 }
 
 .splash-title-text {
   font-family: var(--font-header);
   font-size: 2.2rem;
-  color: var(--accent-gold);
+  color: var(--splash-gold);
   opacity: 0;
   transform: translateY(20px);
   transition: var(--transition-slow);
 }
 
 .splash-title-text.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.splash-quote-text {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--splash-gold-soft);
+  margin-top: 1.25rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: var(--transition-slow);
+  transition-delay: 0.15s;
+}
+
+.splash-quote-text.reveal {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1409,12 +1437,6 @@ footer {
   .testimonial-quote {
     font-size: 1.15rem;
   }
-}
-
-/* --- RTL SPLASH OVERRIDES --- */
-body[dir="rtl"] .splash-title-text {
-  font-size: 2.8rem;
-  line-height: 1.8;
 }
 
 /* --- RTL TIMELINE OVERRIDES (PILLARS OF WISDOM) --- */

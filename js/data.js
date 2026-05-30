@@ -19,6 +19,7 @@ const translations = {
 
     // Splash Screen
     "splash-text": "This is Ahmed Essam... The man who will change the world.",
+    "splash-quote": "\"God willing\"",
 
     // Home / Hero
     "hero-title": "Ahmed Essam",
@@ -114,7 +115,8 @@ const translations = {
     "nav-contact": "مبعوث السلطان",
 
     // Splash Screen
-    "splash-text": "هَذَا هُوَ أَحْمَدُ عِصَامٍ... الرَّجُلُ الَّذِي سَيُغَيِّرُ وَجْهَ الْعَالَمِ.",
+    "splash-text": "هذا هو أحمد عصام... الرجل الذي سيغير وجه العالم.",
+    "splash-quote": "\"إن شاء الله\"",
 
     // Home / Hero
     "hero-title": "أحمد عصام",

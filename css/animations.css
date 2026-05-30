@@ -17,14 +17,15 @@
   opacity: 0;
 }
 
-/* 5s Loading draw logo keyframes */
-.splash-logo-svg path {
+/* 5s Loading draw logo keyframes (scoped to splash — unchanged in light theme) */
+#splash-screen .splash-logo-svg path,
+#splash-screen .splash-logo-svg polygon {
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
-  animation: drawLogo 3.5s ease-in-out forwards;
+  animation: splashDrawLogo 3.5s ease-in-out forwards;
 }
 
-@keyframes drawLogo {
+@keyframes splashDrawLogo {
   0% {
     stroke-dashoffset: 600;
     filter: drop-shadow(0 0 2px rgba(197, 160, 89, 0.1));

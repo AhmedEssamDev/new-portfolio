@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const html = document.documentElement;
   const splashContainer = document.getElementById("splash-screen");
   const splashTitle = document.getElementById("splash-title");
+  const splashQuote = document.getElementById("splash-quote");
   const langToggleBtn = document.getElementById("lang-toggle");
   const themeToggleBtn = document.getElementById("theme-toggle");
   const hamburger = document.getElementById("hamburger-btn");
@@ -231,9 +232,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Update splash title
+    // Update splash title & quote
     if (splashTitle && translations[lang]["splash-text"]) {
       splashTitle.textContent = translations[lang]["splash-text"];
+    }
+    if (splashQuote && translations[lang]["splash-quote"]) {
+      splashQuote.textContent = translations[lang]["splash-quote"];
     }
 
     // Refresh slides layout
@@ -337,6 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Animate text reveal slightly on load
   setTimeout(() => {
     if (splashTitle) splashTitle.classList.add("reveal");
+    if (splashQuote) splashQuote.classList.add("reveal");
   }, 300);
 
   // Trigger wing door swing open (At 4.0s)
