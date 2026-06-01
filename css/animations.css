@@ -63,6 +63,27 @@
   }
 }
 
+@media (max-width: 768px) {
+  .page-turn-active {
+    animation: pageTurnSweepMobile 0.9s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+  }
+}
+
+@keyframes pageTurnSweepMobile {
+  0% {
+    transform: skewX(-4deg) translateX(130%);
+  }
+  45% {
+    transform: skewX(-4deg) translateX(-15%);
+  }
+  55% {
+    transform: skewX(-4deg) translateX(-15%);
+  }
+  100% {
+    transform: skewX(-4deg) translateX(-160%);
+  }
+}
+
 /* --------------------------------------------------------------------------
    3. INK-BLEED BLUR & REVEALS
    -------------------------------------------------------------------------- */

@@ -612,21 +612,31 @@ body[dir="rtl"] .home-portrait-wrapper {
   filter: sepia(0) contrast(1.15) brightness(1.05);
 }
 
-.home-portrait-placeholder svg {
-  width: 100%;
-  height: 100%;
+.astrolabe-wrapper {
+  width: 440px;
+  height: 440px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   z-index: 1;
-  opacity: 0.35;
   pointer-events: none;
-  transition: var(--transition-slow);
+  transition: transform var(--transition-slow);
 }
 
-.home-portrait-placeholder:hover svg {
+.astrolabe-spin {
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+  transition: opacity var(--transition-slow);
+}
+
+.home-portrait-placeholder:hover .astrolabe-wrapper {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.home-portrait-placeholder:hover .astrolabe-spin {
   opacity: 0.6;
-  transform: rotate(45deg);
 }
 
 .home-info {
@@ -1480,6 +1490,10 @@ body[dir="rtl"] .timeline-item.right .timeline-badge {
     width: 220px;
     height: 220px;
   }
+  .astrolabe-wrapper {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 /* Testimonial Arrow Buttons styling */
@@ -1529,6 +1543,9 @@ body[dir="rtl"] .timeline-item.right .timeline-badge {
   }
   .scroll-arrow-btn.next-btn {
     right: -5px;
+  }
+  #page-turn-overlay {
+    transform: skewX(-4deg) translateX(130%);
   }
 }
 
