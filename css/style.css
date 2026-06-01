@@ -523,8 +523,8 @@ section {
   transform: translateY(0);
 }
 
-/* Heavy Page-Turn manuscript folding cover */
 #page-turn-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -537,6 +537,10 @@ section {
   box-shadow: -15px 0 50px rgba(0, 0, 0, 0.8);
   pointer-events: none;
   transition: none;
+}
+
+#page-turn-overlay.page-turn-active {
+  display: block;
 }
 
 /* HOME SECTION - The Audience Hall */
