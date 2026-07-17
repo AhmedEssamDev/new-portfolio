@@ -49,6 +49,7 @@ const translations = {
     "proj-news-desc": "A real-time global intelligence aggregator equipped with localized offline caching and dynamic search layers.",
     "proj-ecommerce-desc": "A grand bazaar application. Integrates clean state architectures, location-aware map routing, and secure checkout gateways.",
     "proj-bookly-desc": "An immersive reading sanctuary engineered with custom viewport physics and high-fidelity page-turn transitions.",
+    "proj-mateen-desc": "An interactive Calisthenics training application that guides users through progressive workouts with a motivational military ranking system.",
     "proj-visit": "Inspect Artifact",
 
     // Skills Section
@@ -146,6 +147,7 @@ const translations = {
     "proj-news-desc": "محرك إخباري عالمي فوري يعتمد على التخزين المؤقت ذي الأولوية المحلية، ومعالجة البيانات من REST APIs، وتصميم شبكي متجاوب.",
     "proj-ecommerce-desc": "منصة تسوق متكاملة تعتمد على معمارية إدارة حالة قوية، وخرائط جوجل لتحديد المواقع الجغرافية، وبوابات دفع إلكترونية آمنة.",
     "proj-bookly-desc": "تطبيق تفاعلي فاخر لاستكشاف وتصنيف الكتب، يعتمد على بنية خدمات نظيفة وانتقالات حركية فيزيائية جذابة.",
+    "proj-mateen-desc": "متين هو تطبيق مخصص لتعليم رياضة Calisthenics بطريقة منظمة وتفاعلية، حيث يساعد المستخدم على تطوير قوته ولياقته البدنية من خلال تمارين مرتبة حسب المستوى، مع نظام تحفيزي يعتمد على التدرج في الرتب العسكرية لإبقاء المستخدم متحمسًا للاستمرار.",
     "proj-visit": "معاينة المستند",
 
     // Skills Section

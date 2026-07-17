@@ -128,6 +128,30 @@ const projectDetails = {
       </ul>
       <a href="https://github.com/AhmedEssamDev/bookly" target="_blank" rel="noopener noreferrer" class="royal-seal-btn" style="display: inline-block;">زيارة مستودع الكود</a>
     `
+  },
+  mateen: {
+    en: `
+      <h2 style="font-family: var(--font-header); color: var(--accent-gold); font-size: 2.2rem; margin-bottom: 20px;">Mateen: Calisthenics Codex</h2>
+      <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; color: var(--text-primary);">Mateen is an interactive and structured Calisthenics training application designed to help users systematically develop strength and fitness. It features progressive, level-ordered exercises paired with a unique military ranking motivational system to sustain long-term commitment.</p>
+      <h4 style="color: var(--accent-gold); margin-bottom: 10px;">Technical Conquests:</h4>
+      <ul style="list-style: square; padding-left: 20px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 30px;">
+        <li>Engineered clean and responsive UI modules for seamless workout progression.</li>
+        <li>Implemented structured state management to track workout history and military rank achievements.</li>
+        <li>Created a gamified motivation engine that elevates users through structural difficulty levels.</li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.mateen.app" target="_blank" rel="noopener noreferrer" class="royal-seal-btn" style="display: inline-block;">View on Play Store</a>
+    `,
+    ar: `
+      <h2 style="font-family: var(--font-header); color: var(--accent-gold); font-size: 2.2rem; margin-bottom: 20px;">تطبيق متين: ديوان الكاليسثنيكس</h2>
+      <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 20px; color: var(--text-primary);">متين هو تطبيق مخصص لتعليم رياضة Calisthenics بطريقة منظمة وتفاعلية، حيث يساعد المستخدم على تطوير قوته ولياقته البدنية من خلال تمارين مرتبة حسب المستوى، مع نظام تحفيزي يعتمد على التدرج في الرتب العسكرية لإبقاء المستخدم متحمسًا للاستمرار.</p>
+      <h4 style="color: var(--accent-gold); margin-bottom: 10px;">الفتوحات والتقنيات المستخدمة:</h4>
+      <ul style="list-style: square; padding-left: 20px; color: var(--text-secondary); line-height: 1.9; margin-bottom: 30px;">
+        <li>تطوير واجهات تدريبية عالية التجاوب والسلاسة باستخدام فلاتر (Flutter).</li>
+        <li>بناء نظام تتبع حالة التمرين ومستوى التقدم وتدرج الرتب العسكرية بدقة.</li>
+        <li>تصميم تجربة مستخدم تحفيزية وتفاعلية تعزز من استمرارية التمرين اليومي.</li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.mateen.app" target="_blank" rel="noopener noreferrer" class="royal-seal-btn" style="display: inline-block;">عرض على متجر بلاي</a>
+    `
   }
 };
 
